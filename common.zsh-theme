@@ -9,7 +9,7 @@ RPROMPT='$(common_git_status)'
 
 # Current Directory on the right side prompt
 # PROMPT='$(common_host)$$(common_bg_jobs)$(common_return_status)'
-# RPROMPT='(common_current_dir)$(git_prompt_info) $(git_prompt_status)'
+# RPROMPT='(common_current_dir)$(git_prompt_status)'
 
 # Prompt with current SHA
 # PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)'
@@ -24,6 +24,9 @@ common_host() {
   fi
   if [[ -n $me ]]; then
     echo "%{$fg[yellow]%}$me%{$reset_color%}:"
+  fi
+    if [[ $AWS_VAULT ]]; then
+    echo "%{$fg[red]%}$AWS_VAULT "
   fi
 }
 

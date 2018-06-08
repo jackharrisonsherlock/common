@@ -6,6 +6,7 @@
 
 - Current working directory
 - Hostname (Shown on remote SSH shell only)
+- AWS Vault Role
 - Background jobs
 - Current SHA (optional)
 - Exit code of last command
