@@ -52,17 +52,18 @@ common_git_status() {
 
     local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
     if [[ -n ${branch} ]]; then
-        message+=" ${message_color}${branch}%f"
+        message+="${message_color}${branch}%f"
     fi
 
     echo -n "${message}"
 }
 
+# Git prompt SHA
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{%F{green}%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
 # Background Jobs
 common_bg_jobs() {
-  bg_status="%{$fg[yellow]%}%(1j.↓%j .)"
+  bg_status="%{$fg[red]%}%(1j.↓%j .)"
   echo -n $bg_status
 }
