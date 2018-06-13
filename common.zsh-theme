@@ -7,10 +7,6 @@ COMMON_PROMPT_SYMBOL="❯"
 # Right Prompt
  RPROMPT='$(common_git_status)'
 
-# Current Directory on the right side prompt
-# PROMPT='$(common_host)$(common_bg_jobs)$(common_return_status)'
-# RPROMPT='$(common_current_dir)$(common_git_status)'
-
 # Prompt with current SHA
 # PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)'
 # RPROMPT='$(common_git_status) $(git_prompt_short_sha)'
