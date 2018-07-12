@@ -1,3 +1,5 @@
+# vim: filetype=sh
+
 # Prompt symbol
 COMMON_PROMPT_SYMBOL="❯"
 
