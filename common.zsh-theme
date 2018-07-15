@@ -66,6 +66,6 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
 # Background Jobs
 common_bg_jobs() {
-  bg_status="%{$fg[red]%}%(1j.↓%j .)"
+  bg_status="%{$fg[yellow]%}%(1j.↓%j .)"
   echo -n $bg_status
 }
