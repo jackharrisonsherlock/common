@@ -43,8 +43,9 @@ common_git_status() {
     local message=""
     local message_color="%F{green}"
 
-    local staged=$(git status --porcelain 2>/dev/null | grep -e "^M " -e "^A ")
-    local unstaged=$(git status --porcelain 2>/dev/null | grep -e "^ M" -e "^??")
+    # https://git-scm.com/docs/git-status#_short_format
+    local staged=$(git status --porcelain 2>/dev/null | grep -e "^[MADRCU]")
+    local unstaged=$(git status --porcelain 2>/dev/null | grep -e "^[MADRCU? ][MADRCU?]")
 
     if [[ -n ${staged} ]]; then
         message_color="%F{red}"
