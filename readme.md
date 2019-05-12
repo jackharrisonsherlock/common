@@ -2,7 +2,7 @@
   <img src="images/common.png" height="64">
 <p align="center">A simple, clean and minimal prompt.</p>
 
-<p align="center"><img src="images/screen.png" height="600"></p>
+<p align="center"><img src="images/screenshot.png" width="864"></p>
 
 - Current working directory
 - Hostname (Shown on remote SSH shell only)
