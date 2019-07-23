@@ -11,6 +11,7 @@
 - Current SHA (optional)
 - Exit code of last command
 - Git branch/status
+- Customisable colour scheme
 
 ## Installation
 
