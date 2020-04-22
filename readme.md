@@ -28,7 +28,7 @@ antigen bundle jackharrisonsherlock/common
 Update your `.zshrc` file with:
 
 ```sh
-antibody bundle jackharrisonsherlock/common
+antibody theme jackharrisonsherlock/common
 ```
 
 ### [Oh My Zsh](http://ohmyz.sh)
