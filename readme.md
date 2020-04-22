@@ -20,7 +20,7 @@
 Update your `.zshrc` file with:
 
 ```sh
-antigen bundle jackharrisonsherlock/common
+antigen theme jackharrisonsherlock/common
 ```
 
 ### [Antibody](https://github.com/getantibody/antibody)
@@ -28,7 +28,7 @@ antigen bundle jackharrisonsherlock/common
 Update your `.zshrc` file with:
 
 ```sh
-antibody theme jackharrisonsherlock/common
+antibody bundle jackharrisonsherlock/common
 ```
 
 ### [Oh My Zsh](http://ohmyz.sh)
