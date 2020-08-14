@@ -15,6 +15,17 @@
 
 ## Installation
 
+### [Oh My Zsh](http://ohmyz.sh)
+
+```sh
+wget -O $ZSH_CUSTOM/themes/common.zsh-theme https://raw.githubusercontent.com/jackharrisonsherlock/common/master/common.zsh-theme
+```
+
+Update your `.zshrc` file with:
+```sh
+ZSH_THEME="common"
+```
+
 ### [Antigen](https://github.com/zsh-users/antigen)
 
 Update your `.zshrc` file with:
@@ -29,15 +40,4 @@ Update your `.zshrc` file with:
 
 ```sh
 antibody bundle jackharrisonsherlock/common
-```
-
-### [Oh My Zsh](http://ohmyz.sh)
-
-```sh
-wget -O $ZSH_CUSTOM/themes/common.zsh-theme https://raw.githubusercontent.com/jackharrisonsherlock/common/master/common.zsh-theme
-```
-
-Update your `.zshrc` file with:
-```sh
-ZSH_THEME="common"
 ```
