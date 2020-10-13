@@ -14,12 +14,13 @@ COMMON_COLORS_GIT_STATUS_STAGED=red
 COMMON_COLORS_GIT_STATUS_UNSTAGED=yellow
 COMMON_COLORS_GIT_PROMPT_SHA=green
 COMMON_COLORS_BG_JOBS=yellow
+COMMON_COLORS_RVM='magenta'
 
 # Left Prompt
  PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)'
 
 # Right Prompt
- RPROMPT='$(common_git_status)'
+RPROMPT='$(common_git_status) $(common_rvm_prompt)'
 
 # Prompt with current SHA
 # PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)'
@@ -81,4 +82,8 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 common_bg_jobs() {
   bg_status="%{$fg[$COMMON_COLORS_BG_JOBS]%}%(1j.↓%j .)"
   echo -n $bg_status
+}
+
+common_rvm_prompt() {
+  echo -n "%{$fg[$COMMON_COLORS_RVM]%}$(rvm-prompt) "
 }
