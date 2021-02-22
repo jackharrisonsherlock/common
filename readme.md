@@ -41,3 +41,7 @@ Update your `.zshrc` file with:
 ```sh
 antibody bundle jackharrisonsherlock/common
 ```
+
+## Terminal
+
+In the screenshot you see Common running in [Hyper](https://hyper.is/) with a [custom colour theme](https://github.com/jackharrisonsherlock/dotfiles/blob/master/dots/.hyper.js) based on [Ray.so Breeze](https://ray.so/) and [SF Mono](https://developer.apple.com/fonts/) font.
