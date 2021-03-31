@@ -24,7 +24,6 @@ COMMON_COLORS_BG_JOBS=yellow
 # Enable redrawing of prompt variables
  setopt promptsubst
 
-
 # Prompt with current SHA
 # PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)'
 # RPROMPT='$(common_git_status) $(git_prompt_short_sha)'
