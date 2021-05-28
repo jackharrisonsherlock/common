@@ -1,3 +1,5 @@
+[RVM PROMPT DEMO](https://asciinema.org/a/pVPJ8bmbZucxecNswfKgAhYsm)
+
 <p align="center">
   <img src="images/common.png" height="64">
 <p align="center">A simple, clean and minimal prompt.</p>
