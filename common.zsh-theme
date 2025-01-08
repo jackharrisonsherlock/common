@@ -82,6 +82,15 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
 # Background Jobs
 common_bg_jobs() {
-  bg_status="%{$fg[$COMMON_COLORS_BG_JOBS]%}%(1j.↓%j .)"
-  echo -n $bg_status
+  local unstaged_count=0
+  local staged_count=0
+
+  unstaged_count=$(git status --porcelain 2>/dev/null | grep -c "^[ MADRCU? ][MADRCU?]")
+
+  staged_count=$(git status --porcelain 2>/dev/null | grep -c "^[MADRCU]")
+
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo -n "%{$fg[$COMMON_COLORS_GIT_STATUS_UNSTAGED]%}↓${unstaged_count}%f "
+    echo -n "%{$fg[$COMMON_COLORS_GIT_STATUS_STAGED]%}↑${staged_count}%f "
+  fi
 }
