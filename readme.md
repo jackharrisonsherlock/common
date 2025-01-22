@@ -44,4 +44,4 @@ antibody bundle jackharrisonsherlock/common
 
 ## Terminal
 
-In the screenshot you see Common running in [Hyper](https://hyper.is/) with the [GitHub Dark Theme](https://github.com/ohheyjosh/hyper-github-dark) and [SF Mono](https://developer.apple.com/fonts/) font.
+In the screenshot you see Common running in [Hyper](https://hyper.is/) with a [Custom Theme](https://github.com/jackharrisonsherlock/dotfiles/blob/master/dots/.hyper.js) and [SF Mono](https://developer.apple.com/fonts/) font.
