@@ -57,18 +57,36 @@ common_return_status() {
 common_git_status() {
     local message=""
     local message_color="%F{$COMMON_COLORS_GIT_STATUS_DEFAULT}"
+    local status_output=$(git status --porcelain --branch 2>/dev/null)
+
+    if [[ -z ${status_output} ]]; then
+        return
+    fi
 
     # https://git-scm.com/docs/git-status#_short_format
-    local staged=$(git status --porcelain 2>/dev/null | grep -e "^[MADRCU]")
-    local unstaged=$(git status --porcelain 2>/dev/null | grep -e "^[MADRCU? ][MADRCU?]")
+    local status_lines=(${(f)status_output})
+    local branch_line=${status_lines[1]}
+    local branch=${branch_line#\#\# }
+    branch=${branch%%...*}
 
-    if [[ -n ${staged} ]]; then
+    local staged=false
+    local unstaged=false
+    local line
+    for line in ${status_lines[@]:1}; do
+        if [[ ${line[1]} == [MADRCU] ]]; then
+            staged=true
+        fi
+        if [[ ${line[2]} == [MADRCU?] ]]; then
+            unstaged=true
+        fi
+    done
+
+    if [[ ${staged} == true ]]; then
         message_color="%F{$COMMON_COLORS_GIT_STATUS_STAGED}"
-    elif [[ -n ${unstaged} ]]; then
+    elif [[ ${unstaged} == true ]]; then
         message_color="%F{$COMMON_COLORS_GIT_STATUS_UNSTAGED}"
     fi
 
-    local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
     if [[ -n ${branch} ]]; then
         message+="${message_color}${branch}%f"
     fi
